@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab2pt.controller.TableController">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <Pane prefHeight="600.0" prefWidth="600.0" GridPane.columnIndex="1">
+      <children>
+         <TableView fx:id="processingTable" layoutX="20.0" prefHeight="380.0" prefWidth="561.0">
+           <columns>
+             <TableColumn fx:id="progressColumn" prefWidth="121.0" text="Postęp" />
+               <TableColumn fx:id="statusColumn" prefWidth="113.0" text="Status" />
+             <TableColumn fx:id="imageNameColumn" minWidth="3.0" prefWidth="320.0" text="Nazwa" />
+           </columns>
+         </TableView>
+         <HBox alignment="CENTER" layoutX="-7.0" layoutY="380.0" prefHeight="211.0" prefWidth="600.0" spacing="10.0">
+            <children>
+               <VBox alignment="CENTER" prefHeight="211.0" prefWidth="280.0" spacing="20.0">
+                  <children>
+                     <Label text="Wybierz ilosc watkow:" />
+                     <ChoiceBox fx:id="numberOfCoresChoiceBox" prefWidth="150.0">
+                      <items>
+                          <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="1" />
+                              <String fx:value="2" />
+                              <String fx:value="4" />
+                              <String fx:value="8" />
+                          </FXCollections>
+                      </items>
+                     </ChoiceBox>
+                     <Button fx:id="parallelProcessingButton" mnemonicParsing="false" onAction="#parallelProcessing" text="Przetwarzaj równolegle" />
+                     <Label text="Czas przetwarzania równolegle" />
+                     <Label fx:id="parallelProcessLabel" text="0" />
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="211.0" prefWidth="280.0" spacing="20.0">
+                  <children>
+                     <Button fx:id="normalProcessingButton" mnemonicParsing="false" onAction="#normalProcessing" text="Przetwarzaj normalnie" />
+                     <Label text="Czas przetwarzania" />
+                     <Label fx:id="processingTimeLabel" text="0" />
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+      </children>
+    </Pane>
+</GridPane>
