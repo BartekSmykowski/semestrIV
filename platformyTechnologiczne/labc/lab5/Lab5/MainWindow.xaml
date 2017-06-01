@@ -1,0 +1,45 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Lab2" x:Class="Lab2.MainWindow"
+        Title="MainWindow" Height="500" Width="500">
+    <Grid HorizontalAlignment="Left" Height="447" Margin="10,10,0,0" VerticalAlignment="Top" Width="480">
+        <Grid HorizontalAlignment="Left" Height="107" Margin="10,10,0,0" VerticalAlignment="Top" Width="193">
+            <Label Content="K" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="N" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="KTextField" HorizontalAlignment="Left" Height="23" Margin="63,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="NTextField" HorizontalAlignment="Left" Height="23" Margin="63,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="107" Margin="203,10,0,0" VerticalAlignment="Top" Width="267">
+            <Button Content="Tasks" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="Tasks_Click"/>
+            <Button Content="Async/Await" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Width="75" Click="AsyncAwait_Click"/>
+            <Button Content="Delegates" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="75" Click="Delegates_Click"/>
+            <TextBox x:Name="TasksTextField" HorizontalAlignment="Left" Height="23" Margin="107,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="DelegatesTextField" HorizontalAlignment="Left" Height="23" Margin="107,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="AsyncAwaitTextField" HorizontalAlignment="Left" Height="23" Margin="107,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="132" Margin="0,117,0,0" VerticalAlignment="Top" Width="267">
+            <Label Content="Fibonacci" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="i&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+            <Button Content="GET" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="75" Click="GET_Click"/>
+            <TextBox x:Name="iTextField" HorizontalAlignment="Left" Height="23" Margin="107,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="FibonacciResultTextField" HorizontalAlignment="Left" Height="23" Margin="107,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <ProgressBar x:Name="FibonacciProgressBar" HorizontalAlignment="Left" Height="12" Margin="10,96,0,0" VerticalAlignment="Top" Width="217"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="183" Margin="10,254,0,0" VerticalAlignment="Top" Width="267">
+            <Label Content="DNS&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Button Content="Resolve" HorizontalAlignment="Left" Margin="53,13,0,0" VerticalAlignment="Top" Width="75" Click="ResolveDNS_Click"/>
+            <TextBlock x:Name="DNSTextBlock" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="115" Width="247"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="107" Margin="267,117,0,0" VerticalAlignment="Top" Width="203">
+            <Label Content="Kompresja&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <Button Content="Decompress" HorizontalAlignment="Left" Margin="118,47,0,0" VerticalAlignment="Top" Width="75" Click="Decompress_Click"/>
+            <Button Content="Compress" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="75" Click="Compress_Click"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="208" Margin="277,229,0,0" VerticalAlignment="Top" Width="203">
+            <Label Content="Responsywnosc&#xD;&#xA;l" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top"/>
+            <Button Content="Check" HorizontalAlignment="Left" Margin="118,71,0,0" VerticalAlignment="Top" Width="75" Click="CheckResponsibility_Click"/>
+            <TextBox x:Name="ResponsibilityTextField" HorizontalAlignment="Left" Height="23" Margin="10,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    public static final int PORT = 12345;
 
 
     public static void main(String[] args) {

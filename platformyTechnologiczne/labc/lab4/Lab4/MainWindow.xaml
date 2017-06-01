@@ -1,0 +1,27 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Lab2" x:Class="Lab2.MainWindow"
+        Title="MainWindow" Height="350" Width="650">
+    <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="10,10,0,0" Width="630" Height="298" VerticalAlignment="Top">
+        <DockPanel DockPanel.Dock="Top" Height="27" LastChildFill="False" VerticalAlignment="Top" Margin="10,0" HorizontalAlignment="Center" Width="610">
+            <Label DockPanel.Dock="Left" Content="Search:" Width="74" Height="27" VerticalAlignment="Top" Margin="10,-1,10,0"/>
+            <TextBox x:Name="searchedPhrase" DockPanel.Dock="Left" Height="27" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="10,0" KeyDown="search"/>
+            <Label DockPanel.Dock="Left" Content="Column:&#xA;" Height="27" VerticalAlignment="Top" Margin="10,0"/>
+            <ComboBox x:Name="columnComboBox" DockPanel.Dock="Left" Height="27" VerticalAlignment="Top" Width="144" Margin="10,0">
+                <ComboBoxItem Content="Model"/>
+                <ComboBoxItem IsSelected="True" Content="Year"/>
+            </ComboBox>
+            <Button x:Name="searchButton" DockPanel.Dock="Left" Content="Find" Width="74" Margin="10,0" Click="search"/>
+        </DockPanel>
+        <DataGrid ItemsSource="{Binding}" x:Name="carsDataGrid" DockPanel.Dock="Top" Height="226" VerticalAlignment="Top" Margin="42,0,0,0" HorizontalAlignment="Left" Width="535" Sorting="customSorting">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Button x:Name="addCarButton" Content="Add New Car" Height="25" VerticalAlignment="Top" Width="75" Click="addCarButton_Click" Margin="10"/>
+
+    </DockPanel>
+</Window>

@@ -1,0 +1,37 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Lab2" x:Class="Lab2.AddingCarWindow"
+        Title="AddingsCar" Height="400" Width="300">
+    <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="6,14,6,-1" Width="280" Height="356" VerticalAlignment="Center">
+        <StackPanel DockPanel.Dock="Top" Height="128" VerticalAlignment="Top" Margin="10,0">
+            <Label Content="Car" Margin="0,0,89,0" FontSize="16" FontFamily="Arial" FontWeight="Bold"/>
+            <StackPanel Height="50" Orientation="Horizontal">
+                <Label Content="Model:" Width="79" Margin="0,10"/>
+                <TextBox x:Name="modelText" TextWrapping="Wrap" Width="125" Margin="0,10"/>
+            </StackPanel>
+            <StackPanel Height="50" Orientation="Horizontal">
+                <Label Content="Year:" Width="78" Margin="0,10"/>
+                <TextBox x:Name="yearText" TextWrapping="Wrap" Width="125" Margin="0,10"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Top" Height="178" VerticalAlignment="Top" Margin="10,0">
+            <Label Content="Engine" Margin="0,0,89,0" FontSize="16" FontFamily="Arial" FontWeight="Bold"/>
+            <StackPanel Height="50" Orientation="Horizontal">
+                <Label Content="Engine model:" Width="100" Margin="0,10"/>
+                <TextBox x:Name="engineModelText" TextWrapping="Wrap" Width="125" Margin="0,10"/>
+            </StackPanel>
+            <StackPanel Height="50" Orientation="Horizontal">
+                <Label Content="Displacement:" Width="100" Margin="0,10"/>
+                <TextBox x:Name="displacementText" TextWrapping="Wrap" Width="125" Margin="0,10"/>
+            </StackPanel>
+            <StackPanel Height="50" Orientation="Horizontal">
+                <Label Content="Horse power:" Width="100" Margin="0,10"/>
+                <TextBox x:Name="horsePowerText" TextWrapping="Wrap" Width="125" Margin="0,10"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Button DockPanel.Dock="Top" Content="Save" Height="40" VerticalAlignment="Top" Width="75" Click="saveButton_Click"/>
+
+    </DockPanel>
+</Window>
